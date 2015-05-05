@@ -1,6 +1,12 @@
-<h1>Login</h1>
-<?= $this->Form->create() ?>
-<?= $this->Form->input('email') ?>
-<?= $this->Form->input('password') ?>
-<?= $this->Form->button('Login') ?>
-<?= $this->Form->end() ?>
+<div class="users form">
+    <?= $this->Form->create($user); ?>
+    <fieldset>
+        <legend><?= __('Login') ?></legend>
+        <?php
+            echo $this->Form->input('email');
+            echo $this->Form->input('password');
+        ?>
+    </fieldset>
+    <?= $this->Form->button(__('Login')) ?>
+    <?= $this->Form->end() ?>
+</div>
