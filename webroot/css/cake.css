@@ -32,11 +32,11 @@ header .header-title {
   padding-left:80px
 }
 
-header .header-title a, a:hover, a:visited {
+header .header-title span a:visited {
   color: #ffffff;
 }
 
-header .header-title > .sub-header {
+header .header-title .sub-header {
   font-size: 0.65em;
 }
 
