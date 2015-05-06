@@ -1,3 +1,6 @@
+<?php
+    $this->assign('title', 'Login');
+?>
 <div class="users form">
     <?= $this->Form->create($user); ?>
     <fieldset>

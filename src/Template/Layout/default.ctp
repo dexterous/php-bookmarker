@@ -13,7 +13,6 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +20,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $cakeDescription ?>:
+        Bookmarker:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -39,7 +38,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <span><?= $this->fetch('title') ?></span>
         </div>
         <div class="header-help">
-        <?php if($this->get('user')) { ?>
+        <?php if($this->get('user')['id']) { ?>
             <span><?= $this->Html->link(__('Profile'), ['controller' => 'users', 'action' => 'view', $user['id']]) ?></span>
             <span><?= $this->Html->link(__('Logout'), ['controller' => 'users', 'action' => 'logout']) ?></span>
         <?php } else { ?>
