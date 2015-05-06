@@ -13,6 +13,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+$appName = 'Bookmarker';
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,7 @@
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Bookmarker:
+        <?= $appName ?>:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -35,7 +36,8 @@
 <body>
     <header>
         <div class="header-title">
-            <span><?= $this->fetch('title') ?></span>
+            <span><?= $this->Html->link($appName, '/') ?></span>
+            <span class="sub-header"><?= $this->fetch('title') ?></span>
         </div>
         <div class="header-help">
         <?php if($this->get('user')['id']) { ?>
